@@ -1,0 +1,291 @@
+<!--
+// [Page]
+   
+   Loook
+ 
+by egg.design //
+ 
+    + basic html and css knowledge is required to customize this page
+    + this code belongs to egg.design. While it is free to use, it is not      free to sell or otherwise redistribute
+    + feel free to edit and custom the theme to your liking, 
+    but don't use as a base, remove the credit, or claim as your own. 
+    + instructions are available throughout the code for easier editing
+    
+Credits
+    + icon fonts from suiomi
+    
+Version 1.00
+-->
+<html>
+    <head>
+    <title>Look</title>
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link href="https://fonts.googleapis.com/css?family=Barlow:500,600" rel="stylesheet">
+    <link href="//dl.dropbox.com/s/vpi3f9s7nhpe7v7/honeybee.css" rel="stylesheet">
+    </head>
+    <style>
+    
+    /* colors */
+    
+    /* this is where you can edit all of the colors. I kept this separate from the rest of the CSS for easier editing */
+    
+    
+    /* background color */
+    body {
+          background:#01a3a4;
+    }
+    
+    /* "look" text color */
+    header {
+        color:white;
+    }
+    
+    /* the two O's in look */
+    .query, .submit {
+        border-color:#55efc4;
+        color:white;
+    }
+    
+    /* magnifying glass handle */
+    .submit:before {
+         background: #00d2d3;
+    }
+    
+    /* submit search icon */
+     header:hover #search .submit span {
+            color:white;
+     }
+     /* placeholder text for search bar */
+     header:hover #search input::placeholder {
+    color:white;
+}
+    /* container */
+    main {
+        background:white;
+    }
+ /* link colors. i've set it up so that the colors will repeat every 3 rows */
+ 
+ /* row 1 */
+    main ul:nth-of-type(3n+1) li {
+          background: #bbefda;
+    }
+   /* row 2 */ 
+    main ul:nth-of-type(3n+2) li {
+    background:#c4e3e4;
+
+}
+/* row 3 */
+    main ul:nth-of-type(3n+3) li {
+    background:#d6f4e9;
+}
+
+
+/* rest of CSS */
+    
+        body {
+            font-family:barlow;
+            margin:0;
+            overflow-x:hidden;
+          
+        }
+        
+        a {
+            text-decoration:none;
+        }
+        
+        header {
+            width:100%;
+            height:46vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            font-weight:bold;
+            transform:scale(1.2);
+            font-size:5.4em;
+            align-content:center;
+        }
+        #search {
+           height:160px;
+        }
+        .query, .submit {
+            background:transparent;
+            padding:20px;
+            margin:0 8px;
+            transform:translate(0, -24px);
+            border-radius:90%;
+            border-width:7.4px;
+            border-style:solid;
+        }
+        
+        .submit {
+            transform:translate(0, -22px);
+            border-radius:100%;
+            padding:21px;
+        }
+        
+        .submit span {
+            color:transparent;
+             transition: all 0.8s cubic-bezier(0.2, 0.8, 0.4, 1.2);
+        }
+        
+        .submit:before {
+            content:'';
+            position:absolute;
+            width:6.2px;
+            left:86%;
+            transform:rotate(-30deg);
+            bottom:-28px;
+            height:29px;
+             transition: all 0.8s cubic-bezier(0.2, 0.8, 0.4, 1.2);
+            border-radius:8px;
+        }
+        
+        header:hover .submit:before {
+            opacity:0;
+              transition: all 0.8s cubic-bezier(0.2, 0.8, 0.4, 1.2);
+        }
+        
+        .query {
+            width:72px;
+            position:relative;
+              transition: all 0.8s cubic-bezier(0.2, 0.8, 0.4, 1.2);
+            
+        }
+     
+        header:hover #search .query {
+              transition: all 0.8s cubic-bezier(0.2, 0.8, 0.4, 1.2);
+              width:150px;
+              border-radius:30px;
+               
+        }
+        
+        header:hover #search .submit span {
+              transition: all 0.8s cubic-bezier(0.2, 0.8, 0.4, 1.2);
+        }
+        
+        input::placeholder {
+    color: transparent;
+    font-family:barlow;
+}
+
+
+
+button:focus, input:focus {outline:0;}
+
+main {
+    z-index:9;
+    position:relative;
+    width:80%;
+
+    max-width:700px;
+    margin:-40px auto 50px;
+    font-size:1.12em;
+    box-shadow:4px 4px 20px rgba(0,0,0,.04);
+    border-radius:10px;
+}
+
+main li {
+    list-style:none;
+    position:relative;
+    display:flex;
+    flex-wrap:wrap;
+    align-content:center;
+    align-items:center;
+    margin:auto;
+}
+main ul {
+    padding:0;
+    padding:20px;
+    margin:10px auto;
+}
+
+
+main li a {
+    text-decoration:none;
+   color:rgba(0,0,0,.6);
+
+}
+
+main li {
+  padding:6px 10px;
+  margin:4px;
+  border-radius:2px;
+     border:1px solid rgba(0,0,0,.046);
+  display:inline-block;
+}
+.two, .three {
+    padding-top:0;
+}
+
+
+h1 {
+    font-weight:normal;
+    font-size:1.4em;
+    margin:0;
+    padding:20px;
+    border-bottom:1px solid #eee;
+}
+
+main b{
+    display:block;
+    margin:10px 0;
+}
+
+footer {
+    width:100%;
+    text-align:center;
+    padding:20px 0;
+    margin:100px 0 0 0;
+    background:white;
+    font-size:1.12em;
+}
+
+footer a {
+    color:#01a3a4;
+}
+    </style>
+    <body>
+    <!-- unless you want to edit the placeholder text, you don't really need to edit the header section -->
+        <header>
+            <div id="search" class="ui-widget"><form action="/search" method="get" id="search-form">L<input type="hidden" id="tags" name="t" value="accessibletheme" /><input type="text" name="q" class="query" value=""  placeholder="search"/><button type="submit" class="submit"><span class="th th-loupe-o"></span></button>K<div class="clear"></div></form></div>
+        </header>
+
+<!-- start of navigation -->        
+        <main>
+        
+            <article>
+            <!-- title. {name} will be your blog url, so you can replace this with something else, or change the entire line of text -->
+                <h1>Take a look at what you'll find on {name}</h1>
+                
+                <!-- category 1 -->
+                <ul><b>Category 1</b>
+                    <li><a href="/tagged/">tag</a></li>
+                        <li><a href="/tagged/">tag</a></li>
+                            <li><a href="/tagged/">tag name</a></li>
+                </ul>   <!-- end of category 1 -->
+                
+                <!-- category 2 -->
+                <ul><b>Category 2</b>
+                       <li><a href="/tagged/">tag name</a></li>
+                        <li><a href="/tagged/">tag</a></li>
+                            <li><a href="/tagged/">tag</a></li>
+                               <li><a href="/tagged/">tag</a></li>
+                        <li><a href="/tagged/">tag</a></li>
+                            <li><a href="/tagged/">tag</a></li>
+                </ul><!-- end of category 2 -->
+                
+                <!-- category 3 -->
+                  <ul><b>Category 3</b>
+                       <li><a href="/tagged/">tag name</a></li>
+                        <li><a href="/tagged/">tag</a></li>
+                            <li><a href="/tagged/">tag name</a></li>
+                               <li><a href="/tagged/">tag</a></li>
+                        <li><a href="/tagged/">tag name</a></li>
+                            <li><a href="/tagged/">tag</a></li>
+                </ul><!-- end of category 3 -->
+             
+            </article>
+        </main>
+        <footer><a href="https://egg.design"> page by egg.design</a></footer>
+    </body>
+</html>
